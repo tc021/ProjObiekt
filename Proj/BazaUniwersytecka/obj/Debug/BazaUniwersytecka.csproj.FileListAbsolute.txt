@@ -1,0 +1,42 @@
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\BazaUniwersytecka.exe.config
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\BazaUniwersytecka.exe
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\BazaUniwersytecka.pdb
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.csprojResolveAssemblyReference.cache
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.Properties.Resources.resources
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.csproj.GenerateResource.Cache
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.exe
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.pdb
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\BU.mdf
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\BU_log.ldf
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\EntityFramework.dll
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\EntityFramework.SqlServer.dll
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\MySql.Data.dll
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\MySql.Web.dll
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\EntityFramework.xml
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\EntityFramework.SqlServer.xml
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\MySql.Data.xml
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\bin\Debug\MySql.Web.xml
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.LoginWindow.resources
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.StudentForm.resources
+E:\WMII\2 rok\Projekt\BazaUniwersytecka\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.LS.resources
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\BazaUniwersytecka.exe.config
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.exe
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.pdb
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\BazaUniwersytecka.exe
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\BazaUniwersytecka.pdb
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\EntityFramework.dll
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\MySql.Data.dll
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\MySql.Web.dll
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\EntityFramework.xml
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\MySql.Data.xml
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\bin\Debug\MySql.Web.xml
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.csprojResolveAssemblyReference.cache
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.LoginWindow.resources
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.LS.resources
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.Properties.Resources.resources
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.StudentForm.resources
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.csproj.GenerateResource.Cache
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.Admin.resources
+C:\Users\Adaś\Documents\GitHub\Proj\BazaUniwersytecka\obj\Debug\BazaUniwersytecka.PracownikForm.resources
