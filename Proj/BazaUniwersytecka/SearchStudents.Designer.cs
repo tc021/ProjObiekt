@@ -104,7 +104,7 @@
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.SearchBox);
             this.Name = "SearchStudents";
-            this.Text = "SearchStudents";
+            this.Text = "Wyszukaj Studenta";
             this.Load += new System.EventHandler(this.SearchStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
