@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BUModelStoreContainer" CdmEntityContainer="BUEntities1">
+    <EntitySetMapping Name="listaPracownikow">
+      <EntityTypeMapping TypeName="BUModel.listaPracownikow">
+        <MappingFragment StoreEntitySet="listaPracownikow">
+          <ScalarProperty Name="idPracownika" ColumnName="idPracownika" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Wydział" ColumnName="Wydział" />
+          <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaStudentow">
+      <EntityTypeMapping TypeName="BUModel.ListaStudentow">
+        <MappingFragment StoreEntitySet="ListaStudentow">
+          <ScalarProperty Name="nrAlbumu" ColumnName="nrAlbumu" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Wydział" ColumnName="Wydział" />
+          <ScalarProperty Name="Kierunek" ColumnName="Kierunek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
