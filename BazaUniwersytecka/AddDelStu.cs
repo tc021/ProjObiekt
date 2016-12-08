@@ -34,6 +34,7 @@ namespace BazaUniwersytecka
         //Metoda dodania Studenta
         private void Add_Click(object sender, EventArgs e)
         {
+
             nrAlbumuAdd = nrAlbBox.Text;
             Imie = ImBox.Text;
             Nazwisko = NazBox.Text;
@@ -47,22 +48,7 @@ namespace BazaUniwersytecka
             Insert = Convert.ToString(LoginWindow.command.ExecuteScalar());
 
         }
-
-        private void AddDelStu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DelStud_Click(object sender, EventArgs e)
-        {
-            //Pobranie nr Albumu do usunięcia
-            nrAlbumuDel = nrAlbumuBox.Text;
-            LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = String.Format("Delete from listastudentow Where nrAlbumu = '{0}'", nrAlbumuDel);
-            LoginWindow.connect.Open();
-            LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
-            Delete = Convert.ToString(LoginWindow.command.ExecuteScalar());
-        }
+       
 
         private void Back_Click(object sender, EventArgs e)
         {
