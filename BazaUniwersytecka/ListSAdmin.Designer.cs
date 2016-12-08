@@ -40,6 +40,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(118, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(564, 266);
@@ -96,6 +97,7 @@
             this.Controls.Add(this.MenuBack);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListSAdmin";
+            this.ShowIcon = false;
             this.Text = "ListSAdmin";
             this.Load += new System.EventHandler(this.ListSAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
