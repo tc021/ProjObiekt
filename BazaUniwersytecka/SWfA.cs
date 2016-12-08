@@ -52,5 +52,27 @@ namespace BazaUniwersytecka
         {
             Application.Exit();
         }
+
+
+        //Przejscie do AddDelW
+        private void DodUs_Click(object sender, EventArgs e)
+        {
+            AddDellW ADW = new AddDellW();
+            this.Close();
+            this.Hide();
+
+            ADW.ShowDialog();
+        }
+
+
+        //Przejscie do ModTabW
+        private void ModT_Click(object sender, EventArgs e)
+        {
+            ModTabW MTW = new ModTabW();
+            this.Close();
+            this.Hide();
+
+            MTW.ShowDialog();
+        }
     }
 }

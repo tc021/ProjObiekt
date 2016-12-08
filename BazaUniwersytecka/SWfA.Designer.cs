@@ -103,6 +103,7 @@
             this.DodUs.TabIndex = 9;
             this.DodUs.Text = "Dodaj Usuń Pracownika";
             this.DodUs.UseVisualStyleBackColor = true;
+            this.DodUs.Click += new System.EventHandler(this.DodUs_Click);
             // 
             // ModT
             // 
@@ -112,6 +113,7 @@
             this.ModT.TabIndex = 10;
             this.ModT.Text = "Modyfikuj Tabele";
             this.ModT.UseVisualStyleBackColor = true;
+            this.ModT.Click += new System.EventHandler(this.ModT_Click);
             // 
             // SWfA
             // 
