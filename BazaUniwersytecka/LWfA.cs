@@ -44,6 +44,8 @@ namespace BazaUniwersytecka
             a.ShowDialog();
         }
 
+
+        //Przejscie do AddDellW
         private void DodUs_Click(object sender, EventArgs e)
         {
             AddDellW ADW = new AddDellW();
@@ -51,12 +53,17 @@ namespace BazaUniwersytecka
             this.Hide();
 
             ADW.ShowDialog();
-
         }
 
+
+        //Przejscie do ModTabW
         private void ModT_Click(object sender, EventArgs e)
         {
+            ModTabW MTW = new ModTabW();
+            this.Close();
+            this.Hide();
 
+            MTW.ShowDialog();
         }
     }
 }

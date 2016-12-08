@@ -9,26 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace BazaUniwersytecka
 {
-    public partial class SWfA : Form
+    public partial class SearchStudents : Form
     {
-        public SWfA()
+        public static string Dane;
+
+
+        public SearchStudents()
         {
             InitializeComponent();
         }
 
-
-        //Wyszukiwanie pracowników
+        //Metoda dla przycisku Szukaj
         private void SearchButton_Click(object sender, EventArgs e)
         {
             //Pobieranie danych
-            SearchStudents.Dane = SearchBox.Text;
+            Dane = SearchBox.Text;
 
-            //Wyszukiwarka pracownikow
-
+            //Wyszukiwarka Studentow
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = String.Format("Select * from listapracownikow where  Imie = '{0}' or idPracownika = '{0}' or Wydzial = '{0}' or Stanowisko = '{0}' or Przedmiot = '{0}' ", SearchStudents.Dane);
+            LoginWindow.Upr = String.Format("Select * from listastudentow Where nrAlbumu = '{0}' or Imie = '{0}' or Nazwisko = '{0}' or Wydzial = '{0}' or Kierunek = '{0}' ", Dane);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
             DataTable dataTable = new DataTable();
@@ -36,47 +38,25 @@ namespace BazaUniwersytecka
 
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable.DefaultView;
+
         }
 
 
-        //Przycisk Cofnij
-        private void Back_Click(object sender, EventArgs e)
-        {
-            Admin a = new Admin();
-            this.Hide();
-            this.Close();
 
 
-            a.ShowDialog();
-        }
-
-
-        //Przycisk Wyjścia
+        //Metoda dla przycisku wyjścia
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-
-        //Przejscie do AddDelW
-        private void DodUs_Click(object sender, EventArgs e)
+        //Metoda dla przycisku powrotu do Okna Dla studenta
+        private void Back_Click(object sender, EventArgs e)
         {
-            AddDellW ADW = new AddDellW();
+            ForStudents BackFS = new ForStudents();
             this.Close();
             this.Hide();
-
-            ADW.ShowDialog();
+            BackFS.ShowDialog();
         }
 
-
-        //Przejscie do ModTabW
-        private void ModT_Click(object sender, EventArgs e)
-        {
-            ModTabW MTW = new ModTabW();
-            this.Close();
-            this.Hide();
-
-            MTW.ShowDialog();
-        }
     }
 }

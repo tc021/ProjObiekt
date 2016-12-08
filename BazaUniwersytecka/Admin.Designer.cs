@@ -28,146 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.StudentList = new System.Windows.Forms.Button();
+            this.StudSearch = new System.Windows.Forms.Button();
+            this.AddDelStud = new System.Windows.Forms.Button();
             this.StudentOption = new System.Windows.Forms.Label();
             this.WorkersOption = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.WorkersList = new System.Windows.Forms.Button();
+            this.SearchWorker = new System.Windows.Forms.Button();
+            this.AddDelWorkier = new System.Windows.Forms.Button();
+            this.ModTabWorkers = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // StudentList
             // 
-            this.button1.Location = new System.Drawing.Point(146, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(466, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.StudentList.Location = new System.Drawing.Point(146, 56);
+            this.StudentList.Name = "StudentList";
+            this.StudentList.Size = new System.Drawing.Size(233, 28);
+            this.StudentList.TabIndex = 0;
+            this.StudentList.Text = "Lista Studentów";
+            this.StudentList.UseVisualStyleBackColor = true;
+            this.StudentList.Click += new System.EventHandler(this.StudentList_Click);
             // 
-            // button2
+            // StudSearch
             // 
-            this.button2.Location = new System.Drawing.Point(146, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(466, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.StudSearch.Location = new System.Drawing.Point(379, 56);
+            this.StudSearch.Name = "StudSearch";
+            this.StudSearch.Size = new System.Drawing.Size(233, 28);
+            this.StudSearch.TabIndex = 1;
+            this.StudSearch.Text = "Wyszukaj Studenta";
+            this.StudSearch.UseVisualStyleBackColor = true;
+            this.StudSearch.Click += new System.EventHandler(this.StudSearch_Click);
             // 
-            // button3
+            // AddDelStud
             // 
-            this.button3.Location = new System.Drawing.Point(146, 90);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(466, 28);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(146, 124);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(466, 28);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.AddDelStud.Location = new System.Drawing.Point(146, 90);
+            this.AddDelStud.Name = "AddDelStud";
+            this.AddDelStud.Size = new System.Drawing.Size(233, 28);
+            this.AddDelStud.TabIndex = 2;
+            this.AddDelStud.Text = "Dodaj/Usuń Studenta";
+            this.AddDelStud.UseVisualStyleBackColor = true;
+            this.AddDelStud.Click += new System.EventHandler(this.AddDelStud_Click);
             // 
             // StudentOption
             // 
             this.StudentOption.AutoSize = true;
-            this.StudentOption.Location = new System.Drawing.Point(143, 6);
+            this.StudentOption.Location = new System.Drawing.Point(358, 40);
             this.StudentOption.Name = "StudentOption";
-            this.StudentOption.Size = new System.Drawing.Size(106, 13);
+            this.StudentOption.Size = new System.Drawing.Size(49, 13);
             this.StudentOption.TabIndex = 4;
-            this.StudentOption.Text = "Opcje dla Studentów";
+            this.StudentOption.Text = "Studenci";
             // 
             // WorkersOption
             // 
             this.WorkersOption.AutoSize = true;
-            this.WorkersOption.Location = new System.Drawing.Point(143, 155);
+            this.WorkersOption.Location = new System.Drawing.Point(358, 138);
             this.WorkersOption.Name = "WorkersOption";
-            this.WorkersOption.Size = new System.Drawing.Size(119, 13);
+            this.WorkersOption.Size = new System.Drawing.Size(62, 13);
             this.WorkersOption.TabIndex = 5;
-            this.WorkersOption.Text = "Opcje dla Pracowników";
+            this.WorkersOption.Text = "Pracownicy";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(146, 171);
+            this.button5.Location = new System.Drawing.Point(379, 90);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(466, 28);
+            this.button5.Size = new System.Drawing.Size(233, 28);
             this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
+            this.button5.Text = "Modyfikacja Tabeli Student";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // WorkersList
             // 
-            this.button6.Location = new System.Drawing.Point(146, 205);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(466, 28);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.WorkersList.Location = new System.Drawing.Point(146, 154);
+            this.WorkersList.Name = "WorkersList";
+            this.WorkersList.Size = new System.Drawing.Size(233, 28);
+            this.WorkersList.TabIndex = 8;
+            this.WorkersList.Text = "Lista Pracowników";
+            this.WorkersList.UseVisualStyleBackColor = true;
+            this.WorkersList.Click += new System.EventHandler(this.WorkersList_Click);
             // 
-            // button7
+            // SearchWorker
             // 
-            this.button7.Location = new System.Drawing.Point(146, 239);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(466, 28);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.SearchWorker.Location = new System.Drawing.Point(379, 154);
+            this.SearchWorker.Name = "SearchWorker";
+            this.SearchWorker.Size = new System.Drawing.Size(233, 28);
+            this.SearchWorker.TabIndex = 9;
+            this.SearchWorker.Text = "Wyszukaj Pracownika";
+            this.SearchWorker.UseVisualStyleBackColor = true;
+            this.SearchWorker.Click += new System.EventHandler(this.SearchWorker_Click);
             // 
-            // button8
+            // AddDelWorkier
             // 
-            this.button8.Location = new System.Drawing.Point(146, 271);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(466, 28);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.AddDelWorkier.Location = new System.Drawing.Point(146, 188);
+            this.AddDelWorkier.Name = "AddDelWorkier";
+            this.AddDelWorkier.Size = new System.Drawing.Size(233, 28);
+            this.AddDelWorkier.TabIndex = 10;
+            this.AddDelWorkier.Text = "Dodaj/Usuń Pracownika";
+            this.AddDelWorkier.UseVisualStyleBackColor = true;
+            this.AddDelWorkier.Click += new System.EventHandler(this.AddDelWorkier_Click);
             // 
-            // button9
+            // ModTabWorkers
             // 
-            this.button9.Location = new System.Drawing.Point(27, 22);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.ModTabWorkers.Location = new System.Drawing.Point(379, 188);
+            this.ModTabWorkers.Name = "ModTabWorkers";
+            this.ModTabWorkers.Size = new System.Drawing.Size(233, 28);
+            this.ModTabWorkers.TabIndex = 12;
+            this.ModTabWorkers.Text = "Modyfikuj tabele Pracownicy";
+            this.ModTabWorkers.UseVisualStyleBackColor = true;
+            this.ModTabWorkers.Click += new System.EventHandler(this.ModTabWorkers_Click);
             // 
-            // button10
+            // button12
             // 
-            this.button10.Location = new System.Drawing.Point(27, 51);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button12.Location = new System.Drawing.Point(146, 266);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(233, 28);
+            this.button12.TabIndex = 13;
+            this.button12.Text = "Wyjście";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // logout
+            // 
+            this.logout.Location = new System.Drawing.Point(379, 266);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(233, 28);
+            this.logout.TabIndex = 14;
+            this.logout.Text = "Wylogowanie";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 306);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.logout);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.ModTabWorkers);
+            this.Controls.Add(this.AddDelWorkier);
+            this.Controls.Add(this.SearchWorker);
+            this.Controls.Add(this.WorkersList);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.WorkersOption);
             this.Controls.Add(this.StudentOption);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddDelStud);
+            this.Controls.Add(this.StudSearch);
+            this.Controls.Add(this.StudentList);
             this.Name = "Admin";
             this.Text = "Admin";
             this.ResumeLayout(false);
@@ -177,17 +186,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button StudentList;
+        private System.Windows.Forms.Button StudSearch;
+        private System.Windows.Forms.Button AddDelStud;
         private System.Windows.Forms.Label StudentOption;
         private System.Windows.Forms.Label WorkersOption;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button WorkersList;
+        private System.Windows.Forms.Button SearchWorker;
+        private System.Windows.Forms.Button AddDelWorkier;
+        private System.Windows.Forms.Button ModTabWorkers;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button logout;
     }
 }

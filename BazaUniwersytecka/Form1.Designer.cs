@@ -41,7 +41,7 @@
             this.Logowanie.Location = new System.Drawing.Point(42, 167);
             this.Logowanie.Name = "Logowanie";
             this.Logowanie.Size = new System.Drawing.Size(660, 47);
-            this.Logowanie.TabIndex = 0;
+            this.Logowanie.TabIndex = 3;
             this.Logowanie.Text = "Zaloguj się";
             this.Logowanie.UseVisualStyleBackColor = true;
             this.Logowanie.Click += new System.EventHandler(this.Logowanie_Click);
@@ -51,7 +51,7 @@
             this.Exit.Location = new System.Drawing.Point(317, 247);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(99, 29);
-            this.Exit.TabIndex = 2;
+            this.Exit.TabIndex = 4;
             this.Exit.Text = "Wyjście";
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
@@ -61,14 +61,14 @@
             this.LoginBox.Location = new System.Drawing.Point(365, 45);
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(215, 20);
-            this.LoginBox.TabIndex = 3;
+            this.LoginBox.TabIndex = 1;
             // 
             // PassBox
             // 
             this.PassBox.Location = new System.Drawing.Point(365, 87);
             this.PassBox.Name = "PassBox";
             this.PassBox.Size = new System.Drawing.Size(215, 20);
-            this.PassBox.TabIndex = 4;
+            this.PassBox.TabIndex = 2;
             this.PassBox.UseSystemPasswordChar = true;
             // 
             // Login
@@ -102,7 +102,6 @@
             this.Controls.Add(this.Logowanie);
             this.Name = "LoginWindow";
             this.Text = "Baza Uniwersytecka";
-            this.Load += new System.EventHandler(this.LoginWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
