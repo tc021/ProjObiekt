@@ -32,7 +32,7 @@
             this.MenuBack = new System.Windows.Forms.Button();
             this.StudentList = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
-            this.ModTs = new System.Windows.Forms.Button();
+            this.MTS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,23 +76,23 @@
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // ModTs
+            // MTS
             // 
-            this.ModTs.Location = new System.Drawing.Point(25, 59);
-            this.ModTs.Name = "ModTs";
-            this.ModTs.Size = new System.Drawing.Size(75, 41);
-            this.ModTs.TabIndex = 5;
-            this.ModTs.Text = "Modyfikuj tabele";
-            this.ModTs.UseVisualStyleBackColor = true;
-            this.ModTs.Click += new System.EventHandler(this.StudentList_Click);
+            this.MTS.Location = new System.Drawing.Point(25, 59);
+            this.MTS.Name = "MTS";
+            this.MTS.Size = new System.Drawing.Size(75, 51);
+            this.MTS.TabIndex = 7;
+            this.MTS.Text = "Modyfikuj Tabele Studenci";
+            this.MTS.UseVisualStyleBackColor = true;
+            this.MTS.Click += new System.EventHandler(this.MTS_Click);
             // 
             // ListSAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 306);
+            this.Controls.Add(this.MTS);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.ModTs);
             this.Controls.Add(this.StudentList);
             this.Controls.Add(this.MenuBack);
             this.Controls.Add(this.dataGridView1);
@@ -111,6 +111,6 @@
         private System.Windows.Forms.Button MenuBack;
         private System.Windows.Forms.Button StudentList;
         private System.Windows.Forms.Button exit;
-        private System.Windows.Forms.Button ModTs;
+        private System.Windows.Forms.Button MTS;
     }
 }
