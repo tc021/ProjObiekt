@@ -1,6 +1,6 @@
 ﻿namespace BazaUniwersytecka
 {
-    partial class LWfA
+    partial class SWfA
     {
         /// <summary>
         /// Required designer variable.
@@ -28,73 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Insert = new System.Windows.Forms.Label();
+            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Back = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.DodUs = new System.Windows.Forms.Button();
             this.ModT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // Insert
+            // 
+            this.Insert.AutoSize = true;
+            this.Insert.Location = new System.Drawing.Point(97, 17);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(386, 13);
+            this.Insert.TabIndex = 3;
+            this.Insert.Text = "Podaj jedno z wybranych danych(nrAlbumu, Imie,  Nazwisko, Wydział, Kierunek)";
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.Location = new System.Drawing.Point(100, 33);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(606, 20);
+            this.SearchBox.TabIndex = 4;
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(100, 59);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchButton.TabIndex = 5;
+            this.SearchButton.Text = "Szukaj";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(118, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(100, 88);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(564, 266);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(606, 182);
+            this.dataGridView1.TabIndex = 6;
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(339, 274);
+            this.Back.Location = new System.Drawing.Point(134, 276);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 2;
+            this.Back.TabIndex = 7;
             this.Back.Text = "Cofnij";
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // Exit
+            // 
+            this.Exit.Location = new System.Drawing.Point(552, 276);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(75, 23);
+            this.Exit.TabIndex = 8;
+            this.Exit.Text = "Wyjście";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // DodUs
             // 
-            this.DodUs.Location = new System.Drawing.Point(22, 12);
+            this.DodUs.Location = new System.Drawing.Point(2, 88);
             this.DodUs.Name = "DodUs";
             this.DodUs.Size = new System.Drawing.Size(75, 41);
-            this.DodUs.TabIndex = 3;
+            this.DodUs.TabIndex = 9;
             this.DodUs.Text = "Dodaj Usuń Pracownika";
             this.DodUs.UseVisualStyleBackColor = true;
-            this.DodUs.Click += new System.EventHandler(this.DodUs_Click);
             // 
             // ModT
             // 
-            this.ModT.Location = new System.Drawing.Point(22, 69);
+            this.ModT.Location = new System.Drawing.Point(2, 135);
             this.ModT.Name = "ModT";
             this.ModT.Size = new System.Drawing.Size(75, 41);
-            this.ModT.TabIndex = 4;
+            this.ModT.TabIndex = 10;
             this.ModT.Text = "Modyfikuj Tabele";
             this.ModT.UseVisualStyleBackColor = true;
-            this.ModT.Click += new System.EventHandler(this.ModT_Click);
             // 
-            // LWfA
+            // SWfA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 306);
             this.Controls.Add(this.ModT);
             this.Controls.Add(this.DodUs);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "LWfA";
-            this.Text = "LWfA";
-            this.Load += new System.EventHandler(this.LWfA_Load);
+            this.Controls.Add(this.SearchButton);
+            this.Controls.Add(this.SearchBox);
+            this.Controls.Add(this.Insert);
+            this.Name = "SWfA";
+            this.Text = "Wyszukiwarka pracowników";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Label Insert;
+        private System.Windows.Forms.TextBox SearchBox;
+        private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button DodUs;
         private System.Windows.Forms.Button ModT;
     }

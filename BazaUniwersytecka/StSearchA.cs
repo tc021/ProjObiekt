@@ -8,47 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using MySql.Data;
-
 
 namespace BazaUniwersytecka
 {
-    public partial class LS : Form
+    
+    public partial class StSearchA : Form
     {
-
-        
-        public LS()
+        public StSearchA()
         {
             InitializeComponent();
         }
+        static public string Dane;
 
-        //Metoda dla przycisku powrotu do Menu dla Studentów
-        private void MenuBack_Click(object sender, EventArgs e)
+
+        private void SearchButton_Click(object sender, EventArgs e)
         {
-            ForStudents StudWindow = new ForStudents();
-            this.Hide();
-            this.Close();
+            //Pobieranie danych
+            Dane = SearchBox.Text;
 
-            StudWindow.ShowDialog();
-        }
-
-        //Metoda dla wyświetlenia Listy Studentów
-        private void LS_Load(object sender, EventArgs e)
-        {
+            //Wyszukiwarka Studentow
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = "Select * from listastudentow";
+            LoginWindow.Upr = String.Format("Select * from listastudentow Where nrAlbumu = '{0}' or Imie = '{0}' or Nazwisko = '{0}' or Wydzial = '{0}' or Kierunek = '{0}' ", Dane);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
             DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(LoginWindow.command);
-            
+
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable.DefaultView;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Back_Click(object sender, EventArgs e)
         {
+            Admin A = new Admin();
+            this.Hide();
+            this.Close();
 
+            A.ShowDialog();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

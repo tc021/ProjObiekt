@@ -53,5 +53,10 @@ namespace BazaUniwersytecka
             ADW.ShowDialog();
 
         }
+
+        private void ModT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
