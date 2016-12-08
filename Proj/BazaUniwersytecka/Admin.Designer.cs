@@ -31,22 +31,20 @@
             this.StudentList = new System.Windows.Forms.Button();
             this.StudSearch = new System.Windows.Forms.Button();
             this.AddDelStud = new System.Windows.Forms.Button();
-            this.ModifyStudent = new System.Windows.Forms.Button();
             this.StudentOption = new System.Windows.Forms.Label();
             this.WorkersOption = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.WorkersList = new System.Windows.Forms.Button();
             this.SearchWorker = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.AddDelWorkier = new System.Windows.Forms.Button();
+            this.ModTabWorkers = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.Logout = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StudentList
             // 
-            this.StudentList.Location = new System.Drawing.Point(146, 22);
+            this.StudentList.Location = new System.Drawing.Point(146, 56);
             this.StudentList.Name = "StudentList";
             this.StudentList.Size = new System.Drawing.Size(233, 28);
             this.StudentList.TabIndex = 0;
@@ -56,7 +54,7 @@
             // 
             // StudSearch
             // 
-            this.StudSearch.Location = new System.Drawing.Point(379, 22);
+            this.StudSearch.Location = new System.Drawing.Point(379, 56);
             this.StudSearch.Name = "StudSearch";
             this.StudSearch.Size = new System.Drawing.Size(233, 28);
             this.StudSearch.TabIndex = 1;
@@ -66,7 +64,7 @@
             // 
             // AddDelStud
             // 
-            this.AddDelStud.Location = new System.Drawing.Point(146, 56);
+            this.AddDelStud.Location = new System.Drawing.Point(146, 90);
             this.AddDelStud.Name = "AddDelStud";
             this.AddDelStud.Size = new System.Drawing.Size(233, 28);
             this.AddDelStud.TabIndex = 2;
@@ -74,20 +72,10 @@
             this.AddDelStud.UseVisualStyleBackColor = true;
             this.AddDelStud.Click += new System.EventHandler(this.AddDelStud_Click);
             // 
-            // ModifyStudent
-            // 
-            this.ModifyStudent.Location = new System.Drawing.Point(379, 56);
-            this.ModifyStudent.Name = "ModifyStudent";
-            this.ModifyStudent.Size = new System.Drawing.Size(233, 28);
-            this.ModifyStudent.TabIndex = 3;
-            this.ModifyStudent.Text = "Modyfikuj Studenta";
-            this.ModifyStudent.UseVisualStyleBackColor = true;
-            this.ModifyStudent.Click += new System.EventHandler(this.ModifyStudent_Click);
-            // 
             // StudentOption
             // 
             this.StudentOption.AutoSize = true;
-            this.StudentOption.Location = new System.Drawing.Point(143, 6);
+            this.StudentOption.Location = new System.Drawing.Point(358, 40);
             this.StudentOption.Name = "StudentOption";
             this.StudentOption.Size = new System.Drawing.Size(49, 13);
             this.StudentOption.TabIndex = 4;
@@ -96,7 +84,7 @@
             // WorkersOption
             // 
             this.WorkersOption.AutoSize = true;
-            this.WorkersOption.Location = new System.Drawing.Point(143, 138);
+            this.WorkersOption.Location = new System.Drawing.Point(358, 138);
             this.WorkersOption.Name = "WorkersOption";
             this.WorkersOption.Size = new System.Drawing.Size(62, 13);
             this.WorkersOption.TabIndex = 5;
@@ -104,7 +92,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(268, 90);
+            this.button5.Location = new System.Drawing.Point(379, 90);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(233, 28);
             this.button5.TabIndex = 6;
@@ -120,6 +108,7 @@
             this.WorkersList.TabIndex = 8;
             this.WorkersList.Text = "Lista Pracowników";
             this.WorkersList.UseVisualStyleBackColor = true;
+            this.WorkersList.Click += new System.EventHandler(this.WorkersList_Click);
             // 
             // SearchWorker
             // 
@@ -129,33 +118,27 @@
             this.SearchWorker.TabIndex = 9;
             this.SearchWorker.Text = "Wyszukaj Pracownika";
             this.SearchWorker.UseVisualStyleBackColor = true;
+            this.SearchWorker.Click += new System.EventHandler(this.SearchWorker_Click);
             // 
-            // button9
+            // AddDelWorkier
             // 
-            this.button9.Location = new System.Drawing.Point(146, 188);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(233, 28);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "Dodaj/Usuń Pracownika";
-            this.button9.UseVisualStyleBackColor = true;
+            this.AddDelWorkier.Location = new System.Drawing.Point(146, 188);
+            this.AddDelWorkier.Name = "AddDelWorkier";
+            this.AddDelWorkier.Size = new System.Drawing.Size(233, 28);
+            this.AddDelWorkier.TabIndex = 10;
+            this.AddDelWorkier.Text = "Dodaj/Usuń Pracownika";
+            this.AddDelWorkier.UseVisualStyleBackColor = true;
+            this.AddDelWorkier.Click += new System.EventHandler(this.AddDelWorkier_Click);
             // 
-            // button10
+            // ModTabWorkers
             // 
-            this.button10.Location = new System.Drawing.Point(379, 188);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(233, 28);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "Modyfikuj Pracownika";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(268, 222);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(233, 28);
-            this.button11.TabIndex = 12;
-            this.button11.Text = "Modyfikuj tabele Pracownicy";
-            this.button11.UseVisualStyleBackColor = true;
+            this.ModTabWorkers.Location = new System.Drawing.Point(379, 188);
+            this.ModTabWorkers.Name = "ModTabWorkers";
+            this.ModTabWorkers.Size = new System.Drawing.Size(233, 28);
+            this.ModTabWorkers.TabIndex = 12;
+            this.ModTabWorkers.Text = "Modyfikuj tabele Pracownicy";
+            this.ModTabWorkers.UseVisualStyleBackColor = true;
+            this.ModTabWorkers.Click += new System.EventHandler(this.ModTabWorkers_Click);
             // 
             // button12
             // 
@@ -165,32 +148,32 @@
             this.button12.TabIndex = 13;
             this.button12.Text = "Wyjście";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // Logout
+            // logout
             // 
-            this.Logout.Location = new System.Drawing.Point(379, 266);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(233, 28);
-            this.Logout.TabIndex = 14;
-            this.Logout.Text = "Wylogowanie";
-            this.Logout.UseVisualStyleBackColor = true;
+            this.logout.Location = new System.Drawing.Point(379, 266);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(233, 28);
+            this.logout.TabIndex = 14;
+            this.logout.Text = "Wylogowanie";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 306);
-            this.Controls.Add(this.Logout);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.ModTabWorkers);
+            this.Controls.Add(this.AddDelWorkier);
             this.Controls.Add(this.SearchWorker);
             this.Controls.Add(this.WorkersList);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.WorkersOption);
             this.Controls.Add(this.StudentOption);
-            this.Controls.Add(this.ModifyStudent);
             this.Controls.Add(this.AddDelStud);
             this.Controls.Add(this.StudSearch);
             this.Controls.Add(this.StudentList);
@@ -206,16 +189,14 @@
         private System.Windows.Forms.Button StudentList;
         private System.Windows.Forms.Button StudSearch;
         private System.Windows.Forms.Button AddDelStud;
-        private System.Windows.Forms.Button ModifyStudent;
         private System.Windows.Forms.Label StudentOption;
         private System.Windows.Forms.Label WorkersOption;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button WorkersList;
         private System.Windows.Forms.Button SearchWorker;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button AddDelWorkier;
+        private System.Windows.Forms.Button ModTabWorkers;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button Logout;
+        private System.Windows.Forms.Button logout;
     }
 }

@@ -38,6 +38,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(118, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(564, 266);
@@ -61,6 +62,7 @@
             this.DodUs.TabIndex = 3;
             this.DodUs.Text = "Dodaj Usuń Pracownika";
             this.DodUs.UseVisualStyleBackColor = true;
+            this.DodUs.Click += new System.EventHandler(this.DodUs_Click);
             // 
             // ModT
             // 
@@ -70,6 +72,7 @@
             this.ModT.TabIndex = 4;
             this.ModT.Text = "Modyfikuj Tabele";
             this.ModT.UseVisualStyleBackColor = true;
+            this.ModT.Click += new System.EventHandler(this.ModT_Click);
             // 
             // LWfA
             // 

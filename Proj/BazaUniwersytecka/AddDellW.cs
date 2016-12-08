@@ -9,72 +9,70 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-
 namespace BazaUniwersytecka
 {
-
-    public partial class AddDelStu : Form
+    public partial class AddDellW : Form
     {
-        static public string nrAlbumuAdd;
-        static public string nrAlbumuDel;
-        static public string Imie;
-        static public string Nazwisko;
-        static public string Wydzial;
-        static public string Kierunek;
+        public string IdWorker;
+        public string IdWorkerD;
+        public string Imie;
+        public string Naziwsko;
+        public string Wydzial;
+        public string Stanowisko;
+        public string Przedmiot;
         public string Insert;
-        public string Delete;
-
-
-        public AddDelStu()
+        public string Del;
+        
+        public AddDellW()
         {
             InitializeComponent();
         }
 
-
-        //Metoda dodania Studenta
         private void Add_Click(object sender, EventArgs e)
         {
+            IdWorker = IdBox.Text;
+            Imie = NameWbox.Text;
+            Naziwsko = SubnWBox.Text;
+            Wydzial = WWBox.Text;
+            Stanowisko = SWBox.Text;
+            Przedmiot = PWBox.Text;
 
-            nrAlbumuAdd = nrAlbBox.Text;
-            Imie = ImBox.Text;
-            Nazwisko = NazBox.Text;
-            Wydzial = WydzBox.Text;
-            Kierunek = KierBox.Text;
+
 
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = String.Format("Insert into listastudentow(nrAlbumu, Imie, Nazwisko, Wydzial, Kierunek) values('{0}','{1}','{2}','{3}','{4}')", nrAlbumuAdd, Imie, Nazwisko, Wydzial, Kierunek);
+            LoginWindow.Upr = String.Format("Insert into listapracownikow(IdPRacownika, Imie, Nazwisko, Wydzial, Stanowisko, Przedmiot) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", IdWorker, Imie, Naziwsko, Wydzial, Stanowisko, Przedmiot);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
             Insert = Convert.ToString(LoginWindow.command.ExecuteScalar());
-
         }
-       
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Admin A = new Admin();
+            Admin a = new Admin();
+
             this.Close();
             this.Hide();
 
-            A.ShowDialog();
+            a.ShowDialog();
         }
 
-        private void Quit_Click(object sender, EventArgs e)
+
+        private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
 
-        //Przycisk usunieca studenta
-        private void DellS_Click(object sender, EventArgs e)
+        // Przycisk usuniecia pracownika
+        private void DellB_Click(object sender, EventArgs e)
         {
-            nrAlbumuDel = DellBox.Text;
+            IdWorkerD = DellBox.Text;
 
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = String.Format("delete from listastudentow where nrAlbumu = '{0}'", nrAlbumuDel);
+            LoginWindow.Upr = String.Format("delete from listapracownikow where idPracownika='{0}'",IdWorkerD);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
-            Delete = Convert.ToString(LoginWindow.command.ExecuteScalar());
+            Del = Convert.ToString(LoginWindow.command.ExecuteScalar());
         }
     }
 }

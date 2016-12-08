@@ -47,6 +47,8 @@ namespace BazaUniwersytecka
             dataGridView1.DataSource = dataTable.DefaultView;
         }
 
+
+        //Przycisk przejscia do AddDelStu
         private void StudentList_Click(object sender, EventArgs e)
         {
             AddDelStu ADS = new AddDelStu();
@@ -56,9 +58,23 @@ namespace BazaUniwersytecka
             ADS.ShowDialog();
         }
 
+        
+        //Przycisk wyjscia
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        
+
+        //Przejsice od ModTabStu
+        private void MTS_Click(object sender, EventArgs e)
+        {
+            ModTabStu MTS = new ModTabStu();
+            this.Hide();
+            this.Close();
+
+
+            MTS.ShowDialog();
         }
     }
 }

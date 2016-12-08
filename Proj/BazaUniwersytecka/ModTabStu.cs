@@ -9,61 +9,62 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace BazaUniwersytecka
 {
-    public partial class LWfA : Form
+    public partial class ModTabStu : Form
     {
-        public LWfA()
+        static public string AddTab;
+        public string Dodanie;
+
+
+
+        public ModTabStu()
         {
             InitializeComponent();
         }
 
 
-        //Wyswietlenie tabeli w gridzie
-        private void LWfA_Load(object sender, EventArgs e)
+        //Dodawanie tabeli
+        private void AddTable_Click(object sender, EventArgs e)
         {
+
+            AddTab = AddTabBox.Text;
+
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = "Select * from listapracownikow";
+            LoginWindow.Upr = String.Format("Alter table listastudentow add {0} varchar(20)", AddTab);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
             DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(LoginWindow.command);
-
             dataAdapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable.DefaultView;
+            MessageBox.Show("Tabela dodana");
         }
-
-
-        //Przycisk cofniecia
+        //Przycisk Cofnij
         private void Back_Click(object sender, EventArgs e)
         {
-            Admin a = new BazaUniwersytecka.Admin();
-            this.Close();
+            Admin A = new Admin();
             this.Hide();
+            this.Close();
+
+            A.ShowDialog();
+
+        }
+
+        //Przucisk wyjdź
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void Back_Click_1(object sender, EventArgs e)
+        {
+            Admin a = new Admin();
+            this.Hide();
+            this.Close();
 
             a.ShowDialog();
-        }
-
-
-        //Przejscie do AddDellW
-        private void DodUs_Click(object sender, EventArgs e)
-        {
-            AddDellW ADW = new AddDellW();
-            this.Close();
-            this.Hide();
-
-            ADW.ShowDialog();
-        }
-
-
-        //Przejscie do ModTabW
-        private void ModT_Click(object sender, EventArgs e)
-        {
-            ModTabW MTW = new ModTabW();
-            this.Close();
-            this.Hide();
-
-            MTW.ShowDialog();
         }
     }
 }

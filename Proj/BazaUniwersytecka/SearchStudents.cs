@@ -22,11 +22,6 @@ namespace BazaUniwersytecka
             InitializeComponent();
         }
 
-        private void SearchStudents_Load(object sender, EventArgs e)
-        {
-
-        }
-
         //Metoda dla przycisku Szukaj
         private void SearchButton_Click(object sender, EventArgs e)
         {

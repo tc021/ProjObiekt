@@ -38,14 +38,27 @@ namespace BazaUniwersytecka
             //Pobranie danych
             nrAlbumu = nrAlbumBox.Text;
             ocenaKoncowa = markBox.Text;
-
-            //Ustawienie Oceny
-            LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = "Update listastudentow set OcenaKoncowa ="+ocenaKoncowa+" where nrAlbumu="+nrAlbumu;
-            LoginWindow.connect.Open();
-            LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
-            Ocena = Convert.ToString(LoginWindow.command.ExecuteScalar());
-
+            if (ocenaKoncowa != "3" && ocenaKoncowa != "3.5" && ocenaKoncowa != "4" && ocenaKoncowa != "4.5" && ocenaKoncowa != "5")
+            {
+                MessageBox.Show("Ocent są w przedziale od 3 do 5");
+            }
+            else
+            {
+                try
+                {
+                    //Ustawienie Oceny
+                    LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
+                    LoginWindow.Upr = "Update listastudentow set OcenaKoncowa =" + ocenaKoncowa + " where nrAlbumu=" + nrAlbumu;
+                    LoginWindow.connect.Open();
+                    LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
+                    Ocena = Convert.ToString(LoginWindow.command.ExecuteScalar());
+                    MessageBox.Show("Ocena Wystawiona");
+                }
+                catch (MySqlException)
+                {
+                    MessageBox.Show("Coś poszło nie tak");
+                }
+            }
         }
     }
 }

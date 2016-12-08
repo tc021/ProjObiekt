@@ -77,6 +77,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDellW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDellW.Designer.cs">
+      <DependentUpon>AddDellW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDelStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDelStu.Designer.cs">
+      <DependentUpon>AddDelStu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +101,41 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListSAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListSAdmin.Designer.cs">
+      <DependentUpon>ListSAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="LS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LS.Designer.cs">
       <DependentUpon>LS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LWfA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LWfA.Designer.cs">
+      <DependentUpon>LWfA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkForStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkForStu.Designer.cs">
+      <DependentUpon>MarkForStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModTabStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModTabStu.Designer.cs">
+      <DependentUpon>ModTabStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModTabW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModTabW.Designer.cs">
+      <DependentUpon>ModTabW.cs</DependentUpon>
     </Compile>
     <Compile Include="PracownikForm.cs">
       <SubType>Form</SubType>
@@ -103,20 +145,89 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchStudents.Designer.cs">
+      <DependentUpon>SearchStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerachStuForTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerachStuForTeacher.Designer.cs">
+      <DependentUpon>SerachStuForTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StSearchA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StSearchA.Designer.cs">
+      <DependentUpon>StSearchA.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentLisForTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentLisForTeacher.Designer.cs">
+      <DependentUpon>StudentLisForTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SWfA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SWfA.Designer.cs">
+      <DependentUpon>SWfA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WL.Designer.cs">
+      <DependentUpon>WL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkersSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkersSearch.Designer.cs">
+      <DependentUpon>WorkersSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkListForWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkListForWork.Designer.cs">
+      <DependentUpon>WorkListForWork.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddDellW.resx">
+      <DependentUpon>AddDellW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDelStu.resx">
+      <DependentUpon>AddDelStu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListSAdmin.resx">
+      <DependentUpon>ListSAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LS.resx">
       <DependentUpon>LS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LWfA.resx">
+      <DependentUpon>LWfA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkForStu.resx">
+      <DependentUpon>MarkForStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModTabStu.resx">
+      <DependentUpon>ModTabStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModTabW.resx">
+      <DependentUpon>ModTabW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PracownikForm.resx">
       <DependentUpon>PracownikForm.cs</DependentUpon>
@@ -130,8 +241,32 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearchStudents.resx">
+      <DependentUpon>SearchStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerachStuForTeacher.resx">
+      <DependentUpon>SerachStuForTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StSearchA.resx">
+      <DependentUpon>StSearchA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLisForTeacher.resx">
+      <DependentUpon>StudentLisForTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWfA.resx">
+      <DependentUpon>SWfA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WL.resx">
+      <DependentUpon>WL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkersSearch.resx">
+      <DependentUpon>WorkersSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkListForWork.resx">
+      <DependentUpon>WorkListForWork.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

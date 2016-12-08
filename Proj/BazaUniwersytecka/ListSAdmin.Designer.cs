@@ -32,6 +32,7 @@
             this.MenuBack = new System.Windows.Forms.Button();
             this.StudentList = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
+            this.MTS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,6 +40,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(118, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(564, 266);
@@ -46,7 +48,7 @@
             // 
             // MenuBack
             // 
-            this.MenuBack.Location = new System.Drawing.Point(298, 285);
+            this.MenuBack.Location = new System.Drawing.Point(296, 274);
             this.MenuBack.Name = "MenuBack";
             this.MenuBack.Size = new System.Drawing.Size(75, 23);
             this.MenuBack.TabIndex = 4;
@@ -56,9 +58,9 @@
             // 
             // StudentList
             // 
-            this.StudentList.Location = new System.Drawing.Point(12, 12);
+            this.StudentList.Location = new System.Drawing.Point(25, 12);
             this.StudentList.Name = "StudentList";
-            this.StudentList.Size = new System.Drawing.Size(100, 43);
+            this.StudentList.Size = new System.Drawing.Size(75, 41);
             this.StudentList.TabIndex = 5;
             this.StudentList.Text = "Dodaj/Usuń Studenta";
             this.StudentList.UseVisualStyleBackColor = true;
@@ -66,7 +68,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(394, 285);
+            this.exit.Location = new System.Drawing.Point(394, 274);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(75, 23);
             this.exit.TabIndex = 6;
@@ -74,16 +76,28 @@
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // MTS
+            // 
+            this.MTS.Location = new System.Drawing.Point(25, 59);
+            this.MTS.Name = "MTS";
+            this.MTS.Size = new System.Drawing.Size(75, 51);
+            this.MTS.TabIndex = 7;
+            this.MTS.Text = "Modyfikuj Tabele Studenci";
+            this.MTS.UseVisualStyleBackColor = true;
+            this.MTS.Click += new System.EventHandler(this.MTS_Click);
+            // 
             // ListSAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 356);
+            this.ClientSize = new System.Drawing.Size(750, 306);
+            this.Controls.Add(this.MTS);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.StudentList);
             this.Controls.Add(this.MenuBack);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListSAdmin";
+            this.ShowIcon = false;
             this.Text = "ListSAdmin";
             this.Load += new System.EventHandler(this.ListSAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -97,5 +111,6 @@
         private System.Windows.Forms.Button MenuBack;
         private System.Windows.Forms.Button StudentList;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button MTS;
     }
 }

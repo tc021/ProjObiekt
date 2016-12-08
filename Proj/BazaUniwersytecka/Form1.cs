@@ -16,8 +16,10 @@ namespace BazaUniwersytecka
     {
         static public string login;
         static public string passwd;
-        public MySqlConnection connect;
+        static public MySqlConnection connect;
         public string Uprawnienie;
+        static public string Upr;
+        static public MySqlCommand command;
 
 
 
@@ -42,30 +44,31 @@ namespace BazaUniwersytecka
                 connect.Open();
            
             //Sprawdzanie uprawnien
-            MySqlCommand command;
-            string Upr = String.Format("Select Uprawnienie from uzytkownicy Where uzytkownicy.Login = '{0}'", login);
+            Upr = String.Format("Select Uprawnienie from uzytkownicy Where uzytkownicy.Login = '{0}'", login);
             command = new MySqlCommand(Upr, connect);
             Uprawnienie = Convert.ToString(command.ExecuteScalar());
             }
-            catch (MySqlException wyjatek)
+            catch (MySqlException)
             {
                 MessageBox.Show("Zle haslo albo login");
             }
 
+            //sprawdzanie czy osoba logująca się jest studentem
             if (Uprawnienie == "Std")
             {
-                PracownikForm st = new PracownikForm();
+                ForStudents st = new ForStudents();
                 this.Hide(); 
                 st.ShowDialog();
             }
-            
-            else if(Uprawnienie == "Pr")
+            //sprawdzanie czy osoba logująca się jest
+            else if (Uprawnienie == "Pr")
             {
                 PracownikForm pr = new PracownikForm();
                 this.Hide();
                 pr.ShowDialog();
             }
-            else if(Uprawnienie == "Admin")
+            //sprawdzanie czy osoba logująca się jest
+            else if (Uprawnienie == "Admin")
             {
                 Admin Ad = new Admin();
                 this.Hide();
@@ -75,14 +78,11 @@ namespace BazaUniwersytecka
         }
 
         //Metoda dla przycisku "Wyjście"
-        private void Exit_Click(object sender, EventArgs e)
+        public void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void LoginWindow_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

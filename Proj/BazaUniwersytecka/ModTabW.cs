@@ -8,47 +8,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using MySql.Data;
-
 
 namespace BazaUniwersytecka
 {
-    public partial class LS : Form
+    public partial class ModTabW : Form
     {
-
-        
-        public LS()
+        static public string AddTab;
+        public string Dodanie;
+        public ModTabW()
         {
             InitializeComponent();
         }
 
-        //Metoda dla przycisku powrotu do Menu dla Studentów
-        private void MenuBack_Click(object sender, EventArgs e)
-        {
-            ForStudents StudWindow = new ForStudents();
-            this.Hide();
-            this.Close();
 
-            StudWindow.ShowDialog();
-        }
-
-        //Metoda dla wyświetlenia Listy Studentów
-        private void LS_Load(object sender, EventArgs e)
+        //Dodanie tabeli
+        private void AddTable_Click(object sender, EventArgs e)
         {
+            AddTab = AddTabBox.Text;
+
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = "Select * from listastudentow";
+            LoginWindow.Upr = String.Format("Alter table listapracownikow add {0} varchar(20)", AddTab);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
             DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(LoginWindow.command);
-            
             dataAdapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable.DefaultView;
+            MessageBox.Show("Tabela dodana");
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Back_Click(object sender, EventArgs e)
         {
+            Admin a = new Admin();
+            this.Close();
+            this.Hide();
 
+            a.ShowDialog();
+            
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
