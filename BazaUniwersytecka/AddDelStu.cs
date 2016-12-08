@@ -63,5 +63,18 @@ namespace BazaUniwersytecka
         {
             Application.Exit();
         }
+
+
+        //Przycisk usunieca studenta
+        private void DellS_Click(object sender, EventArgs e)
+        {
+            nrAlbumuDel = DellBox.Text;
+
+            LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
+            LoginWindow.Upr = String.Format("delete from listastudentow where nrAlbumu = '{0}'", nrAlbumuDel);
+            LoginWindow.connect.Open();
+            LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
+            Delete = Convert.ToString(LoginWindow.command.ExecuteScalar());
+        }
     }
 }

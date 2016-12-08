@@ -14,6 +14,7 @@ namespace BazaUniwersytecka
     public partial class AddDellW : Form
     {
         public string IdWorker;
+        public string IdWorkerD;
         public string Imie;
         public string Naziwsko;
         public string Wydzial;
@@ -39,7 +40,7 @@ namespace BazaUniwersytecka
 
 
             LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
-            LoginWindow.Upr = String.Format("Insert into listra pracownikow(IdPRacownika, Imie, Nazwisko, Wydzial, Stanowisko, Przedmiot) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5})", IdWorker, Imie, Naziwsko, Wydzial, Stanowisko, Przedmiot);
+            LoginWindow.Upr = String.Format("Insert into listapracownikow(IdPRacownika, Imie, Nazwisko, Wydzial, Stanowisko, Przedmiot) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", IdWorker, Imie, Naziwsko, Wydzial, Stanowisko, Przedmiot);
             LoginWindow.connect.Open();
             LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
             Insert = Convert.ToString(LoginWindow.command.ExecuteScalar());
@@ -55,9 +56,23 @@ namespace BazaUniwersytecka
             a.ShowDialog();
         }
 
+
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+        // Przycisk usuniecia pracownika
+        private void DellB_Click(object sender, EventArgs e)
+        {
+            IdWorkerD = DellBox.Text;
+
+            LoginWindow.connect = new MySqlConnection("server = localhost; userid = root; password = admin; database=bazauniwersytecka");
+            LoginWindow.Upr = String.Format("delete from listapracownikow where idPracownika='{0}'",IdWorkerD);
+            LoginWindow.connect.Open();
+            LoginWindow.command = new MySqlCommand(LoginWindow.Upr, LoginWindow.connect);
+            Del = Convert.ToString(LoginWindow.command.ExecuteScalar());
         }
     }
 }

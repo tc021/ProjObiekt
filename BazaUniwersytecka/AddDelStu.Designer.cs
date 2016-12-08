@@ -42,6 +42,10 @@
             this.Add = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.Quit = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DellS = new System.Windows.Forms.Button();
+            this.DellBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 68);
+            this.label2.Location = new System.Drawing.Point(27, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 2;
@@ -135,11 +139,11 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(651, 84);
+            this.Add.Location = new System.Drawing.Point(629, 84);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 20);
+            this.Add.Size = new System.Drawing.Size(97, 20);
             this.Add.TabIndex = 3;
-            this.Add.Text = "Dodaj";
+            this.Add.Text = "Dodaj Studenta";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
@@ -163,11 +167,49 @@
             this.Quit.UseVisualStyleBackColor = true;
             this.Quit.Click += new System.EventHandler(this.Quit_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Usuń Studenta";
+            // 
+            // DellS
+            // 
+            this.DellS.Location = new System.Drawing.Point(30, 214);
+            this.DellS.Name = "DellS";
+            this.DellS.Size = new System.Drawing.Size(100, 23);
+            this.DellS.TabIndex = 10;
+            this.DellS.Text = "Usuń studenta";
+            this.DellS.UseVisualStyleBackColor = true;
+            this.DellS.Click += new System.EventHandler(this.DellS_Click);
+            // 
+            // DellBox
+            // 
+            this.DellBox.Location = new System.Drawing.Point(30, 188);
+            this.DellBox.Name = "DellBox";
+            this.DellBox.Size = new System.Drawing.Size(100, 20);
+            this.DellBox.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Podaj Nr Albumu";
+            // 
             // AddDelStu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 306);
+            this.Controls.Add(this.DellBox);
+            this.Controls.Add(this.DellS);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Quit);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Add);
@@ -175,6 +217,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.KierBox);
             this.Controls.Add(this.WydzBox);
@@ -205,5 +248,9 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Quit;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button DellS;
+        private System.Windows.Forms.TextBox DellBox;
+        private System.Windows.Forms.Label label8;
     }
 }

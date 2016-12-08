@@ -44,6 +44,10 @@
             this.Add = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DellB = new System.Windows.Forms.Button();
+            this.DellBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -114,7 +118,7 @@
             this.IdBox.Location = new System.Drawing.Point(30, 92);
             this.IdBox.Name = "IdBox";
             this.IdBox.Size = new System.Drawing.Size(100, 20);
-            this.IdBox.TabIndex = 2;
+            this.IdBox.TabIndex = 1;
             // 
             // NameWbox
             // 
@@ -128,64 +132,101 @@
             this.SubnWBox.Location = new System.Drawing.Point(254, 92);
             this.SubnWBox.Name = "SubnWBox";
             this.SubnWBox.Size = new System.Drawing.Size(139, 20);
-            this.SubnWBox.TabIndex = 2;
+            this.SubnWBox.TabIndex = 3;
             // 
             // WWBox
             // 
             this.WWBox.Location = new System.Drawing.Point(402, 92);
             this.WWBox.Name = "WWBox";
             this.WWBox.Size = new System.Drawing.Size(132, 20);
-            this.WWBox.TabIndex = 2;
+            this.WWBox.TabIndex = 4;
             // 
             // SWBox
             // 
             this.SWBox.Location = new System.Drawing.Point(543, 92);
             this.SWBox.Name = "SWBox";
             this.SWBox.Size = new System.Drawing.Size(148, 20);
-            this.SWBox.TabIndex = 2;
+            this.SWBox.TabIndex = 5;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(700, 92);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(136, 20);
-            this.textBox6.TabIndex = 2;
+            this.textBox6.TabIndex = 6;
             // 
             // Add
             // 
             this.Add.Location = new System.Drawing.Point(30, 133);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
-            this.Add.TabIndex = 3;
-            this.Add.Text = "Dodaj";
+            this.Add.TabIndex = 7;
+            this.Add.Text = "Dodaj Pracownika";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(318, 248);
+            this.Back.Location = new System.Drawing.Point(321, 271);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 4;
+            this.Back.TabIndex = 10;
             this.Back.Text = "Cofnij";
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(402, 248);
+            this.Exit.Location = new System.Drawing.Point(402, 271);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(75, 23);
-            this.Exit.TabIndex = 5;
+            this.Exit.TabIndex = 11;
             this.Exit.Text = "Wyjdź";
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(27, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Dodaj Pracownika";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 196);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Podaj Id Pracownika";
+            // 
+            // DellB
+            // 
+            this.DellB.Location = new System.Drawing.Point(136, 210);
+            this.DellB.Name = "DellB";
+            this.DellB.Size = new System.Drawing.Size(139, 23);
+            this.DellB.TabIndex = 9;
+            this.DellB.Text = "Usuń Pracownika";
+            this.DellB.UseVisualStyleBackColor = true;
+            this.DellB.Click += new System.EventHandler(this.DellB_Click);
+            // 
+            // DellBox
+            // 
+            this.DellBox.Location = new System.Drawing.Point(30, 212);
+            this.DellBox.Name = "DellBox";
+            this.DellBox.Size = new System.Drawing.Size(100, 20);
+            this.DellBox.TabIndex = 12;
             // 
             // AddDellW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 306);
+            this.Controls.Add(this.DellBox);
+            this.Controls.Add(this.DellB);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Add);
@@ -200,7 +241,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Name = "AddDellW";
             this.Text = "Dodaj Usuń Pracownika";
@@ -227,5 +270,9 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button DellB;
+        private System.Windows.Forms.TextBox DellBox;
     }
 }
